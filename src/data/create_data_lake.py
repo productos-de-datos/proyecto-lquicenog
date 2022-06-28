@@ -21,7 +21,18 @@ def create_data_lake():
 
 
     """
-    raise NotImplementedError("Implementar esta función")
+import os
+
+    os.makedirs(os.path.join("./ , data_lake"))
+    os.makedirs(os.path.join("./ , data_lake/landing"))
+    os.makedirs(os.path.join("./ , data_lake/raw"))
+    os.makedirs(os.path.join("./ , data_lake/cleansed"))
+    os.makedirs(os.path.join("./ , data_lake/business"))
+    os.makedirs(os.path.join("./ , data_lake/business/reports/figures"))
+    os.makedirs(os.path.join("./ , data_lake/business/features"))
+    os.makedirs(os.path.join("./ , data_lake/business/forecasts"))
+    
+    #raise NotImplementedError("Implementar esta función")
 
 
 if __name__ == "__main__":
