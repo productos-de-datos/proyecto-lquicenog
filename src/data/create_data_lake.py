@@ -20,19 +20,23 @@ def create_data_lake():
     ```
 
 
-    """
-import os
-
-    os.makedirs(os.path.join("./data_lake"))
-    os.makedirs(os.path.join("./data_lake/landing"))
-    os.makedirs(os.path.join("./data_lake/raw"))
-    os.makedirs(os.path.join("./data_lake/cleansed"))
-    os.makedirs(os.path.join("./data_lake/business"))
-    os.makedirs(os.path.join("./data_lake/business/reports"))
-    os.makedirs(os.path.join("./data_lake/business/reports/figures"))
-    os.makedirs(os.path.join("./data_lake/business/features"))
-    os.makedirs(os.path.join("./data_lake/business/forecasts"))
     
+    """
+    #Creamos carpetas  usando la funcion mkdir del modulo os
+    import os
+
+    os.mkdir('./data_lake/')
+    parent_dir = 'data_lake/'
+    carpetas = ['landing', 'raw', 'cleansed', 'business']
+    [os.mkdir(os.path.join(parent_dir, c)) for c in carpetas]
+    parent_dir = 'data_lake/business/'
+    carpetas = ['reports', 'features', 'forecasts']
+    [os.mkdir(os.path.join(parent_dir, c)) for c in carpetas]
+    parent_dir = 'data_lake/business/reports/'
+    directory = 'figures'
+    os.mkdir(os.path.join(parent_dir, directory))
+    
+
     #raise NotImplementedError("Implementar esta función")
 
 
@@ -40,5 +44,6 @@ if __name__ == "__main__":
     import doctest
 
     doctest.testmod()
-    
-create_data_lake()
+    create_data_lake()
+
+
