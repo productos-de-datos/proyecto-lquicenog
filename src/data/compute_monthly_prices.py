@@ -1,3 +1,9 @@
+  """
+    Documentación:
+    La funcionalidad de compute_monthly_prices es calcular el promedio mensual del archivo precio-horarios.
+    Considerando que la data va desde 07/1995 hasta 04/2021, el número de meses incluídos en este periodo de
+    tiempo, suman 310; por lo tanto, los registros que se obtendran serán 310 (uno por cada mes).
+  """
 def compute_monthly_prices():
     """Compute los precios promedios mensuales.
 
@@ -14,12 +20,10 @@ def compute_monthly_prices():
     """
     import pandas as pd
 
-    #Leemos el archivo de datos limpios
     data = pd.read_csv("data_lake/cleansed/precios-horarios.csv")
 
     data["fecha"] = pd.to_datetime(data["fecha"])
 
-    #Realizamos la agrupacion por fecha, mes y sacamos la media 
     data = data.set_index("fecha").resample("M")["precio"].mean()
 
     data.to_csv("data_lake/business/precios-mensuales.csv", index=True)
@@ -27,8 +31,7 @@ def compute_monthly_prices():
     #raise NotImplementedError("Implementar esta función")
 
 ### TEST ###
-#los datos van desde el mes 7 de 1995, hasta el mes 4 de 2021 para un equivalente a 310 meses por lo
-#cual si se saco el promedio mensual, deben haber 310 registros.
+
 def test_cantidad_meses():
     import pandas as pd
     data = pd.read_csv("data_lake/business/precios-mensuales.csv")
