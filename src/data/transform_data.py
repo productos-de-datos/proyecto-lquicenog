@@ -1,3 +1,8 @@
+"""
+Documentación:
+    La funcionalidad de transform_data es la transformación de los archivos descargados con la funcionalidad ingest_data. Se transforman
+    todos los archivos en archivos tipo CSV.
+ """
 def transform_data():
     """Transforme los archivos xls a csv.
 
@@ -10,11 +15,8 @@ def transform_data():
 
     import pandas as pd
 
-    #Creamos una lista para el encabezado de los archivos transformados 
     encabezado = ['Fecha', 'H00', 'H01', 'H02', 'H03', 'H04', 'H05', 'H06', 'H07', 'H08', 'H09', 'H10', 'H11', 'H12', 'H13', 'H14', 'H15', 'H16', 'H17', 'H18', 'H19', 'H20', 'H21', 'H22', 'H23']
     
-    #Transformacion de archivos .xls o .xlsx a .csv segun la cantidad de filas superiores vacias que
-    #es necesario eliminar. Se toma las 25 columnas correspondiente a fecha y 24 horas
     for num in range(1995, 2022):        
         if num in range(1995, 2000):
             data_csv = pd.read_excel('data_lake/landing/{}.{}'.format(num, 'xlsx'), header=3)
