@@ -1,3 +1,8 @@
+"""
+    Documentación:
+    La funcionalidad compute_daily_prices consiste computar el promedio de los precios por mes, tomándolos del archivo precios-horarios.csv. Se tiene en
+    cuenta para como parte de la validación, que los meses evaluados en el periodo junio de 1995 y abril de 2021, son 310 meses, es decir, 310 registros.
+"""
 def compute_monthly_prices():
     """Compute los precios promedios mensuales.
 
@@ -27,8 +32,7 @@ def compute_monthly_prices():
     #raise NotImplementedError("Implementar esta función")
 
 ### TEST ###
-#los datos van desde el mes 7 de 1995, hasta el mes 4 de 2021 para un equivalente a 310 meses por lo
-#cual si se saco el promedio mensual, deben haber 310 registros.
+
 def test_cantidad_meses():
     import pandas as pd
     data = pd.read_csv("data_lake/business/precios-mensuales.csv")
