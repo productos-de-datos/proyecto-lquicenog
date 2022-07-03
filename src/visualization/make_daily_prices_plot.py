@@ -1,3 +1,7 @@
+"""
+Documentación:
+    Se crea un gráfico de líneas, con el promedio de precios diarios. Se guarda un png con la imagen.
+"""
 def make_daily_prices_plot():
     """Crea un grafico de lines que representa los precios promedios diarios.
 
@@ -24,8 +28,8 @@ def make_daily_prices_plot():
 
     #Realizamos el grafico con matplotlib
     plt.figure(figsize=(15, 6))
-    plt.plot(x, y, 'b', label='Precio Promedio Diario')
-    plt.title('Precios Promedios Diarios')
+    plt.plot(x, y, 'b', label='Promedio de precios diario')
+    plt.title('Promedios de Precios Diarios')
     plt.xlabel('Fecha (Años)')
     plt.ylabel('Precio ($/kWh)')
     plt.legend()
