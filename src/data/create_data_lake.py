@@ -27,7 +27,7 @@ def create_data_lake():
 
     
     """
-    #Creamos carpetas  usando la funcion mkdir del modulo os
+   
     import os
 
     os.mkdir('./data_lake/')
