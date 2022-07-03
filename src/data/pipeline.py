@@ -1,4 +1,9 @@
 """
+Documentación:
+Este pipeline tiene como objetivo orquestar todas las funciones anteriormente realizadas, una vez se haya creado el datalake. 
+Es decir, que se ejecutan las funciones de ingesta de datos, transformación, limpieza, cálculo precios promedios diarios y mensuales. 
+"""
+"""
 Construya un pipeline de Luigi que:
 
 * Importe los datos xls
