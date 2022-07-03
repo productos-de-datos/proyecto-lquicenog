@@ -1,8 +1,8 @@
 """
 Documentación:
     La funcionalidad de ingest_data es descargar los archivos por año de los precios_bolsa_nacional. Estos archivos se descargan 
-    desde 1995 hasta 2021. Se debe tener presente que para los año 2016 y 2017 la extensión de los archivos cambia (xlsx); los demás
-    tiene extensión xls.
+    desde 1995 hasta 2021. Se debe tener presente que para los año 2016 y 2017 la extensión de los archivos cambia (xls); los demás
+    tiene extensión xlsx.
 """
 
 
