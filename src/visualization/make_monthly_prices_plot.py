@@ -1,7 +1,3 @@
-""""
-Documentación:
-Con la función make_monthly_plot se grafica por medio de un gráfico de líneas el promedio mesual de los precios y se imprime la imagen en un png
-"""
 def make_monthly_prices_plot():
     """Crea un grafico de lines que representa los precios promedios mesuales.
 
